@@ -1,6 +1,11 @@
 import { Client, QueryFetcher } from "gqless";
 import { schema, Query } from "./generated";
 
+let onRequestInfo = (info) => {};
+export const setOnRequestInfo = (input) => {
+    onRequestInfo = input
+};
+
 const endpoint = "https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn";
 
 const fetchQuery: QueryFetcher = async (query, variables) => {
@@ -21,6 +26,8 @@ const fetchQuery: QueryFetcher = async (query, variables) => {
   }
 
   const json = await response.json();
+
+  onRequestInfo({query, errors: json.errors});
 
   return json;
 };
