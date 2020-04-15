@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "gqless-merged-queries-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "generate": "gqless generate"
+  },
+  "dependencies": {
+    "@gqless/react": "^0.0.1-alpha.28",
+    "gqless": "^0.0.1-alpha.29",
+    "next": "^9.3.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@gqless/cli": "^0.0.1-alpha.31",
+    "@types/react": "^16.9.34",
+    "typescript": "^3.8.3"
+  }
+}
