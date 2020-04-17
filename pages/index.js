@@ -57,10 +57,15 @@ const LastGraphqlRequest = () => {
   return (
     <div>
       <h3>Last graphql request:</h3>
-      <h4>Request:</h4>
-      <pre>{info?.query}</pre>
-      <h4>Errors:</h4>
-      <pre>{JSON.stringify(info?.errors, null, 2)}</pre>
+      {info && (<>
+        <h4>Query</h4>
+        <pre>{info.query}</pre>
+        <h4>Variables</h4>
+        <pre>{JSON.stringify(info.variables)}</pre>
+        <h4>Errors</h4>
+        <pre>{JSON.stringify(info.errors, null, 2)}</pre>
+      </>)}
+
     </div>
   )
 }

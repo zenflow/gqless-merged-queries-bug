@@ -27,7 +27,7 @@ const fetchQuery: QueryFetcher = async (query, variables) => {
 
   const json = await response.json();
 
-  onRequestInfo({query, errors: json.errors});
+  onRequestInfo({query, variables, errors: json.errors});
 
   return json;
 };
