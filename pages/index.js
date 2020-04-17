@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 import { useState, Suspense } from 'react'
-import { graphql } from '@gqless/react'
+import { graphql, useVariable } from '@gqless/react'
 import { query, setOnRequestInfo } from '../gqless'
 
 const NoSsr = dynamic(() => Promise.resolve(props => (<>{props.children}</>)), {ssr: false})
@@ -36,8 +36,12 @@ const IndexPage = () => {
 }
 
 const pageSize = 5;
+const first = pageSize;
 const PageOfPosts = graphql(({pageIndex}) => {
-  const posts = query.allPosts({skip: pageIndex * pageSize, first: pageSize})
+  const skipValue = pageIndex * pageSize
+  const skip = useVariable(skipValue)
+  console.log({pageIndex, skipValue, skip, 'skip.value': skip.value})
+  const posts = query.allPosts({skip, first})
   return (
     <>
       <h5>Page {pageIndex + 1}</h5>
