@@ -11,6 +11,7 @@
     "generate": "gqless generate"
   },
   "dependencies": {
+    "@gqless/logger": "^0.0.1-alpha.27",
     "@gqless/react": "^0.0.1-alpha.28",
     "gqless": "^0.0.1-alpha.29",
     "next": "^9.3.5",

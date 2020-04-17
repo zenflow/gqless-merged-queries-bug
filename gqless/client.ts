@@ -35,3 +35,9 @@ const fetchQuery: QueryFetcher = async (query, variables) => {
 export const client = new Client<Query>(schema.Query, fetchQuery);
 
 export const query = client.query;
+
+if (process.browser) {
+    import('@gqless/logger').then(({ Logger }) => {
+        const logger = new Logger(client, true)
+    })
+}
