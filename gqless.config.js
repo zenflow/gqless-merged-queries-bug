@@ -1,4 +1,4 @@
 module.exports = {
-  "url": "https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn",
+  "url": "https://nextjs-graphql-with-prisma-simple.vercel.app/api",
   "outputDir": "gqless"
 }
