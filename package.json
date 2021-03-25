@@ -11,16 +11,18 @@
     "generate": "gqless generate"
   },
   "dependencies": {
-    "@gqless/logger": "^0.0.1-alpha.27",
-    "@gqless/react": "^0.0.1-alpha.28",
-    "gqless": "^0.0.1-alpha.29",
-    "next": "^9.3.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "@gqless/logger": "^2.0.1",
+    "@gqless/react": "^2.0.2",
+    "@gqless/subscriptions": "^1.0.1",
+    "gqless": "^2.0.1",
+    "next": "^10.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@gqless/cli": "^0.0.1-alpha.31",
-    "@types/react": "^16.9.34",
-    "typescript": "^3.8.3"
+    "@gqless/cli": "^2.0.1",
+    "@types/node": "^14.14.35",
+    "@types/react": "^17.0.3",
+    "typescript": "^4.2.3"
   }
 }

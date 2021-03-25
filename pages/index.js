@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic'
 import { useState, Suspense } from 'react'
-import { graphql } from '@gqless/react'
-import { query, setOnRequestInfo } from '../gqless'
+import { graphql, query, setOnRequestInfo } from '../gqless'
 
 const NoSsr = dynamic(() => Promise.resolve(props => (<>{props.children}</>)), {ssr: false})
 
